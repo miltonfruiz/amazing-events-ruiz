@@ -1,0 +1,297 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/*---------------------- I N D E X -----------------------*/
+
+/*---------- Header -----------*/
+
+header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+nav a {
+  text-decoration: none;
+}
+.logo-ae {
+  width: 100px;
+  filter: drop-shadow(5px 1px 4px rgb(255, 255, 255));
+  border-radius: 1px;
+}
+.logo-ae:hover {
+  transition: 2s;
+  translate: 10px;
+}
+.btn {
+  font-size: 13px;
+}
+label {
+  font-size: 13px;
+}
+#home-container,
+#upcoming-container,
+#past-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-control {
+  font-size: 12px;
+  border-radius: 50px 0px 0px 50px;
+  width: 170px;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 25px;
+}
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.card-scale:hover {
+  transition: 1s;
+  transform: scale(1.04);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 100px;
+}
+main {
+  position: relative;
+}
+
+.carousel-item {
+  height: auto;
+}
+.forms-container {
+  border: 1px solid rgb(221, 221, 221);
+  width: 500px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+/*---------------------- S T A T S -----------------------*/
+
+/*---------- Main -----------*/
+
+table {
+  border: 2px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.vacia {
+  height: 24px;
+}
+
+/* .table-container:hover {
+  transition: 1s;
+  transform: scale(1.05);
+} */
+.empty:hover {
+  background-color: rgb(220, 53, 69);
+  cursor: pointer;
+}
+
+th {
+  text-align: center;
+  background-color: rgb(221, 221, 221);
+  color: black;
+  font-weight: lighter;
+  font-size: 17px;
+  height: 30px;
+}
+td {
+  text-align: center;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 13px;
+  height: 24px;
+}
+
+/*---------- Footer -----------*/
+
+.insta :hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.face :hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.wsp :hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.title {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.pie {
+  position: relative;
+  top: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.buscador {
+  position: relative;
+  left: 135px;
+}
+.descripction-img {
+  font-size: 12px;
+}
+.mini-cards:hover {
+  transition: 1s;
+  transform: scale(1.02);
+}
+.card-img {
+  width: 215px;
+  height: 138px;
+}
+.card {
+  width: 223px;
+  height: 317px;
+}
+.card-title {
+  font-size: 15px;
+}
+.card-description {
+  font-size: 11px;
+}
+.details-boton {
+  position: absolute;
+  left: 60px;
+  top: 268px;
+}
+
+#home-boton-prev,
+#home-boton-next,
+#upcoming-boton-prev,
+#upcoming-boton-next,
+#past-boton-prev,
+#past-boton-next,
+#contact-boton-prev,
+#contact-boton-next,
+#stats-boton-prev,
+#stats-boton-next {
+  position: absolute;
+  top: 26px;
+  bottom: auto;
+  width: 120px;
+}
+.details-card {
+  width: 1000px;
+  height: 200px;
+}
+.container-details-card {
+  border-radius: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  width: 700px;
+  height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-details-card:hover {
+  transition: 1s;
+  transform: scale(1.05);
+}
+.card-text-description {
+  font-size: 13px;
+}
+.price-logo,
+.name-logo,
+.category-logo {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.date-logo {
+  width: 22px;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+.place-logo {
+  width: 15px;
+  margin-right: 10px;
+  margin-left: 4px;
+}
+.capacity-logo {
+  width: 25px;
+  margin-right: 10px;
+}
+.assistance-logo {
+  width: 20px;
+  margin-right: 13px;
+}
+.details-footer {
+  margin-top: 0px;
+}
+.card-text-details {
+  font-size: 15px;
+}
+.carousel-control-prev-icon:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+.carousel-control-next-icon:hover {
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+#finder-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 4px;
+}
+a:hover {
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: white 0px 3px 8px;
+}
+.lupa {
+  width: 20px;
+}
+#search-boton,
+#search-boton-up,
+#search-boton-past,
+#search-boton-lupa {
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 0px 50px 50px 0px;
+  width: 50px;
+  filter: brightness(100%);
+}
+#search-boton:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#search-boton-up:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#search-boton-past:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#search-boton-lupa:hover {
+  filter: hue-rotate(1deg) brightness(300%) opacity(60%);
+  transition: 1s;
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(139, 0, 0);
+}
+#error-boton {
+  position: absolute;
+  left: 48px;
+}
+#error-img {
+  object-fit: cover;
+  height: 180px;
+}
+#home-container {
+}
