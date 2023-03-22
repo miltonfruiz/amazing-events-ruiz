@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-AmazingEvents.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fredoka+One&family=Poppins:wght@200;300&family=Roboto+Flex:opsz,wght@8..144,100&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <title>Stats</title>
+  </head>
+  <body id="body-dark-mode" class="body-dark-mode">
+    <header class="container-fluid">
+      <div class="row container-header bg-secondary">
+        <div class="col text-center pt-3 aEvent" id="aEvent">
+          <img
+            src="./assets/images/logo-amazing-events.png"
+            alt="logo-ae"
+            width="90"
+            class="logo-ae p-1"
+          />
+        </div>
+        <div class="col text-center p-3 navas" id="navas">
+          <nav>
+            <a
+              href="./index.html"
+              id="home"
+              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              >Home</a
+            >
+            <a
+              href="./upcoming-events.html"
+              id="upcoming-events"
+              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              >Upcoming Events</a
+            >
+            <a
+              href="./past-events.html"
+              id="past-events"
+              class="past-events me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              >Past Events</a
+            >
+            <a
+              href="./contact.html"
+              id="contact"
+              class="me-3 text-white btn btn-outline-danger px-3 py-1 border border-white border-opacity-50"
+              >Contact</a
+            >
+            <a
+              href="#"
+              id="stats"
+              class="me-3 text-white btn btn-danger px-3 py-1 border border-white border-opacity-50"
+              >Stats</a
+            >
+          </nav>
+          <div>
+            <img
+              id="darkmode-icon"
+              src="./assets/images/dark-mode.png"
+              alt="logo-dark-mode"
+              width="25"
+              class="img-dark-mode"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid mb-5 main" id="main">
+      <div id="carousel-container" class="carousel slide row">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4 h1" id="h1">Stats</h1>
+            </div>
+            <div class="table-container mb-5">
+              <table class="container mt-5 col-9 statics-table">
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th colspan="3">Events Statistics</th>
+                  </tr>
+                  <tr>
+                    <td class="subtd col-4">
+                      Events with the highest percentage of attendance
+                    </td>
+                    <td class="subtd col-4">
+                      Events with the lowest percentage of attendance
+                    </td>
+                    <td class="subtd col-4">Event with larger capacity</td>
+                  </tr>
+                </thead>
+                <tbody id="events-statistics"></tbody>
+              </table>
+              <table class="container mt-5 col-9 upcoming-table">
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th colspan="3">Upcoming Events Statistics By Category</th>
+                  </tr>
+                  <tr>
+                    <td class="subtd col-4">Categories</td>
+                    <td class="subtd col-4">Revenues</td>
+                    <td class="subtd col-4">Percentage of attendance</td>
+                  </tr>
+                </thead>
+                <tbody id="upcoming-events-statistics"></tbody>
+              </table>
+              <table class="container mt-5 col-9 past-table">
+                <caption></caption>
+                <thead>
+                  <tr>
+                    <th colspan="3">Past Events Statistics By Category</th>
+                  </tr>
+                  <tr>
+                    <td class="subtd col-4">Categories</td>
+                    <td class="subtd col-4">Revenues</td>
+                    <td class="subtd col-4">Percentage of attendance</td>
+                  </tr>
+                </thead>
+                <tbody id="past-events-statistics"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4 h1" id="h1">Home</h1>
+            </div>
+            <div class="container text-center">
+              <div class="row row-searcher">
+                <div class="col-8 mt-3">
+                  <form id="home-category"></form>
+                </div>
+                <div class="col-4 mt-3 search-container">
+                  <form id="search-form">
+                    <label>
+                      <input
+                        class="search-input form-control ms-4 mt-2 home-search"
+                        id="search-input"
+                        type="search"
+                        placeholder="Search event..."
+                        aria-label="Search"
+                      />
+                      <img
+                        src="./assets/images/lupa.png"
+                        alt="img-lupa"
+                        class="lupa-img"
+                      />
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="m-5 mt-0" id="home-container"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4 h1" id="h1">Upcoming Events</h1>
+            </div>
+            <div class="container text-center">
+              <div class="row row-searcher">
+                <div class="col-8 mt-3">
+                  <form id="upcoming-category"></form>
+                </div>
+                <div class="col-4 mt-3 search-container">
+                  <form id="search-form">
+                    <label>
+                      <input
+                        class="search-input form-control ms-4 mt-2 upcoming-search"
+                        id="search-input"
+                        type="search"
+                        placeholder="Search event..."
+                        aria-label="Search"
+                      />
+                      <img
+                        src="./assets/images/lupa.png"
+                        alt="img-lupa"
+                        class="lupa-img"
+                      />
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="m-5 mt-0" id="upcoming-container"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4 h1" id="h1">Past Events</h1>
+            </div>
+            <div class="container text-center">
+              <div class="row row-searcher">
+                <div class="col-8 mt-3">
+                  <form id="past-category"></form>
+                </div>
+                <div class="col-4 mt-3 search-container">
+                  <form id="search-form">
+                    <label>
+                      <input
+                        class="search-input form-control ms-4 mt-2 past-search"
+                        id="search-input"
+                        type="search"
+                        placeholder="Search event..."
+                        aria-label="Search"
+                      />
+                      <img
+                        src="./assets/images/lupa.png"
+                        alt="img-lupa"
+                        class="lupa-img"
+                      />
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="m-5 mt-0" id="past-container"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="title row text-center bg-body-tertiary">
+              <h1 class="pt-4 h1" id="h1">Contact</h1>
+            </div>
+            <div class="forms-container container mt-5 mb-5">
+              <div class="mb-3">
+                <label for="name" class="form-label mt-2">Name</label>
+                <input
+                  type="text"
+                  class="form-control px-0 input-contact"
+                  id="name"
+                  placeholder="  enter name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control px-0 input-contact"
+                  id="email"
+                  placeholder="  enter email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="mensagge" class="form-label">Mesagge</label>
+                <textarea
+                  class="form-control px-0 input-contact"
+                  id="mensagge"
+                  placeholder="  enter message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <div class="container text-end mt-4 px-0 py-2">
+                <button type="submit" class="btn btn-outline-danger">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          id="stats-boton-prev"
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel-container"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bg-secondary border border-white border-opacity-50"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          id="stats-boton-next"
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel-container"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bg-secondary border border-white border-opacity-50"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+    <footer class="container-fluid mt-4">
+      <div class="row container-footer text-center bg-body-tertiary">
+        <div class="col text-center pt-3 redes" id="redes">
+          <a href="https://www.instagram.com/" target="_blank" class="insta"
+            ><img
+              src="./assets/images/instagram.png"
+              alt="logo-instagram"
+              width="30"
+              class="me-3"
+          /></a>
+          <a href="https://www.facebook.com/" target="_blank" class="face"
+            ><img
+              src="./assets/images/facebook.png"
+              alt="logo-facebook"
+              width="40"
+              class="me-3"
+          /></a>
+          <a href="https://web.whatsapp.com/" target="_blank" class="wsp"
+            ><img
+              src="./assets/images/whatsapp.png"
+              alt="logo-whatsapp"
+              width="35"
+              class="me-3"
+          /></a>
+        </div>
+        <div class="col text-center cohorte" id="cohorte">
+          <div class="texto-footer">
+            <p class="mt-4">FE01 - TM</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/scripts/home.js"></script>
+    <script src="./assets/scripts/upcoming.js"></script>
+    <script src="./assets/scripts/past.js"></script>
+    <script src="./assets/scripts/details.js"></script>
+    <script src="./assets/scripts/darkmode.js"></script>
+    <script src="./assets/scripts/stats.js"></script>
+  </body>
+</html>
