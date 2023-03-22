@@ -1,1 +1,1 @@
-# 3. Filtering Data
+# 3. Amazing Event API and Stats
