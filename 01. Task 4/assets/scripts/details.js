@@ -1,4 +1,4 @@
-const upcomingObject = {
+const objectDetails = {
   currentDate: "2022-09-01",
   events: [
     {
@@ -469,137 +469,38 @@ const upcomingObject = {
   ],
 };
 
-//----------------------------------------------------------------- Capturo ------------------------------------------------------------------//
+//------------------------------------------------------------------- ID Search --------------------------------------------------------------//
 
-const upcomingContainer = document.getElementById("upcoming-container");
-const finderContainerUp = document.getElementById("finder-container-up");
-const formContainerUp = document.getElementById("form-container-up");
-const categoryContainerUp = document.getElementById("category-container-up");
+function detailsCards(array) {
+  genericCardDetails = `<div class="container-details-card mb-3 container">
+  <div class="row">
+    <div class="col">
+      <img src="${array.image}" class="img-fluid rounded-start details-card mt-2" alt="img-logo">
+      <h5 class="card-title-details m-3 text-center"><img src="./assets/images/name.png" alt="logo-price" class="name-logo">${array.name}</h5>
+      <p class="card-text-description m-3 text-center">${array.description}</p>
+    </div>
+    <div class="col">
+      <div class="card-body mt-4 ms-3">
+        <p class="card-text-details m-3"><img src="./assets/images/category.png" alt="logo-category" class="category-logo">Category: ${array.category}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/date.png" alt="logo-date" class="date-logo"> Date: ${array.date}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/place.png" alt="logo-place" class="place-logo"> Place: ${array.place}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/price.png" alt="logo-price" class="price-logo">Price: $${array.price}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/capacity.png" alt="logo-capacity" class="capacity-logo">Capacity: ${array.capacity}</p>
+        <p class="card-text-details m-3"><img src="./assets/images/assistance.png" alt="logo-assistance" class="assistance-logo">Assistance: ${array.assistance}</p>
+        <p class="card-text m-3"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-//----------------------------------------------------------- Upcoming Events Cards ----------------------------------------------------------//
-
-function enabledCardUp(array) {
-  genericCardUp = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
-  <div class="card" style="width: 14rem">
-    <img
-      src="${array.image}"
-      class="card-img m-1"
-      alt="img-food"
-    />
-    <div class="card-body">
-      <h5 class="card-title text-center">${array.name}</h5>
-      <p class="card-description text-center">${array.description}</p>
-      <a
-        href="./details.html?id=${array._id}"
-        class="btn btn-outline-danger details-boton"
-        id="food-boton"
-        >More Details</a
-      >
+      </div>
     </div>
   </div>
 </div>`;
-  return genericCardUp;
+  return genericCardDetails;
 }
 
-const upcomingCards = upcomingObject.events
-  .filter((parameter) => parameter.date > upcomingObject.currentDate)
-  .map((cardUp) => enabledCardUp(cardUp))
-  .join("");
-upcomingContainer.innerHTML = upcomingCards;
-
-//------------------------------------------------------------------ Search ------------------------------------------------------------------//
-
-const wrongCardUp = `<div class="card-scale ms-5 mt-5 d-flex flex-wrap">
-<div class="card" style="width: 14rem">
-  <img
-    id="error-img"
-    src="./assets/lupa-x.jpg"
-    class="card-img m-1"
-    alt="img-food"
-  />
-  <div class="card-body">
-    <h5 class="card-title text-center">Card Not Found</h5>
-    <p class="card-description text-center"></p>
-    <a
-      href="./index.html"
-      class="btn btn-outline-danger details-boton"
-      id="error-boton"
-      >Return to home</a
-    >
-  </div>
-</div>
-</div>`;
-
-formContainerUp.addEventListener("keyup", (event) => {
-  event.preventDefault();
-  if (event.key === "Escape") finderContainerUp.value = "";
-  if (event.key === "Enter") finderContainerUp.value === finderContainerUp;
-  let nameFilter = upcomingObject.events
-    .filter((parameter) =>
-      parameter.name
-        .toLowerCase()
-        .includes(finderContainerUp.value.toLowerCase())
-    )
-    .map((card) => enabledCardUp(card))
-    .join("");
-  upcomingContainer.innerHTML = nameFilter;
-  if (!nameFilter) {
-    wrongCardUp;
-    upcomingContainer.innerHTML = wrongCardUp;
-  }
-});
-
-formContainerUp.addEventListener("submit", (event) => {
-  event.preventDefault();
-  finderContainerUp.value;
-  finderContainerUp === finderContainerUp.value;
-});
-
-//-------------------------------------------------------------- Category CheckBox -----------------------------------------------------------//
-
-function enableCheckboxUp(array) {
-  genericCheckbox = `<div class="form-check form-check-inline p-3 ms-2">
-  <input
-    class="form-check-input"
-    type="checkbox"
-    id="${array.category.toLowerCase()}-checkbox"
-    value="${array.category.toLowerCase()}"
-  />
-  <label class="form-check-label" for="homeCheckbox1"
-    >${array.category}</label
-  >
-</div>`;
-  return genericCheckbox;
-}
-
-let categoriesUp = "";
-upcomingObject.events.map((parameter) => {
-  if (!categoriesUp.includes(parameter.category)) {
-    categoriesUp += enableCheckboxUp(parameter);
-  }
-});
-categoryContainerUp.innerHTML = categoriesUp;
-
-let activeUp = [];
-categoryContainerUp.addEventListener("click", (events) => {
-  if (events.target.checked != undefined) {
-    if (events.target.checked) {
-      let create = upcomingObject.events
-        .filter(
-          (argument) => argument.category.toLowerCase() === events.target.value
-        )
-        .map((card) => enabledCardUp(card))
-        .join("");
-      activeUp.push(create);
-      upcomingContainer.innerHTML = create;
-    } else {
-      let inactive = activeUp.indexOf(events.target.value);
-      if (inactive != -1) {
-        activeUp.splice(inactive, 1);
-        upcomingContainer.innerHTML = create;
-      }
-      upcomingContainer.innerHTML = upcomingCards;
-    }
-  }
-  console.log(events);
-});
+const queryString = location.search;
+let params = new URLSearchParams(queryString);
+let extractedId = params.get("id");
+const moreDetails = objectDetails.events.find(
+  (card) => card._id == extractedId
+);
+const containerDetails = document.getElementById("container-details");
+containerDetails.innerHTML = detailsCards(moreDetails);

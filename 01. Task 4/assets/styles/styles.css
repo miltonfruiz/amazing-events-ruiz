@@ -4,10 +4,42 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-/*---------------------- I N D E X -----------------------*/
 
+/*---------------------- D A R K M O D E -----------------------*/
+
+.body-dark-mode {
+  color: white;
+  background-color: #333f44;
+  transition: 0.3s ease all;
+}
+.cohorte,
+.redes,
+.aEvent,
+.navas {
+  background-color: #1a1a1b;
+  transition: 0.3s ease all;
+}
+.h1,
+.main {
+  background-color: #333f44;
+  transition: 0.3s ease all;
+}
+
+body {
+  transition: 0.3s ease all;
+}
+
+/*---------------------- I N D E X -----------------------*/
 /*---------- Header -----------*/
 
+.container-header {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  height: 65px;
+}
 header {
   position: sticky;
   top: 0px;
@@ -16,11 +48,17 @@ header {
   z-index: 1;
 }
 nav a {
+  box-shadow: rgba(168, 159, 159, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   text-decoration: none;
 }
 .logo-ae {
   width: 100px;
-  filter: drop-shadow(5px 1px 4px rgb(255, 255, 255));
+  margin-right: 200px;
+  filter: drop-shadow(1px 1px 1px rgb(255, 255, 255));
   border-radius: 1px;
 }
 .logo-ae:hover {
@@ -45,11 +83,18 @@ label {
   width: 170px;
 }
 .card {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   margin-left: 25px;
+  width: 223px;
+  height: 317px;
+  background-color: whitesmoke;
 }
 .card:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  box-shadow: white 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .card-scale:hover {
@@ -59,6 +104,11 @@ label {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 main {
   position: relative;
@@ -67,10 +117,22 @@ main {
 .carousel-item {
   height: auto;
 }
+/*---------------------- C O N T A C T -----------------------*/
+
+/*---------- Main -----------*/
+.active {
+  height: auto;
+}
 .forms-container {
   border: 1px solid rgb(221, 221, 221);
-  width: 500px;
+  width: 317px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/*---------- Footer ---------*/
+.container-footer {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 /*---------------------- S T A T S -----------------------*/
 
@@ -80,32 +142,31 @@ table {
   border: 2px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.vacia {
-  height: 24px;
-}
-
-/* .table-container:hover {
-  transition: 1s;
-  transform: scale(1.05);
-} */
-.empty:hover {
+.rowPointer:hover {
   background-color: rgb(220, 53, 69);
   cursor: pointer;
 }
-
 th {
   text-align: center;
-  background-color: rgb(221, 221, 221);
-  color: black;
+  color: white;
   font-weight: lighter;
   font-size: 17px;
   height: 30px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.subtd {
+  font-size: 13px;
+  height: 27px;
 }
 td {
   text-align: center;
   border: 1px solid rgb(221, 221, 221);
-  font-size: 13px;
-  height: 24px;
+  font-size: 11px;
+  height: 25px;
 }
 
 /*---------- Footer -----------*/
@@ -123,16 +184,13 @@ td {
   transform: scale(1.2);
 }
 .title {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.pie {
-  position: relative;
-  top: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-
 .buscador {
   position: relative;
   left: 135px;
@@ -148,17 +206,17 @@ td {
   width: 215px;
   height: 138px;
 }
-.card {
-  width: 223px;
-  height: 317px;
-}
 .card-title {
+  color: black;
   font-size: 15px;
 }
 .card-description {
+  color: black;
   font-size: 11px;
 }
 .details-boton {
+  border: 1px solid red;
+  color: red;
   position: absolute;
   left: 60px;
   top: 268px;
@@ -175,7 +233,7 @@ td {
 #stats-boton-prev,
 #stats-boton-next {
   position: absolute;
-  top: 26px;
+  top: 36px;
   bottom: auto;
   width: 120px;
 }
@@ -236,7 +294,6 @@ td {
   transition: 1s;
   transform: scale(1.2);
 }
-
 #finder-container:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 4px;
 }
@@ -293,5 +350,62 @@ a:hover {
   object-fit: cover;
   height: 180px;
 }
-#home-container {
+.img-dark-mode {
+  filter: drop-shadow(1px 1px 4px rgb(255, 255, 255));
+  border-radius: 1px;
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+}
+.img-dark-mode:hover {
+  transition: 1s;
+  transform: scale(1.3);
+}
+.category-logo,
+.date-logo,
+.place-logo,
+.price-logo,
+.capacity-logo,
+.assistance-logo,
+.name-logo {
+  filter: drop-shadow(1px 1px 5px rgb(255, 255, 255));
+}
+.upcoming-search,
+.past-search,
+.home-search {
+  font-size: 12px;
+  border-radius: 50px 50px 50px 50px;
+  width: 220px;
+  height: 33px;
+}
+#search-form {
+  margin-left: 120px;
+  margin-top: 1px;
+}
+.lupa-img {
+  width: 15px;
+  position: absolute;
+  top: 150px;
+  right: 109px;
+}
+.row-searcher {
+  margin-top: 15px;
+}
+.input-contact {
+  border-radius: 5px 5px 5px 5px;
+  width: 290px;
+}
+.statics-table:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+.upcoming-table:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+.past-table:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+#search-input {
 }
